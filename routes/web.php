@@ -14,7 +14,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
 require __DIR__.'/auth.php';
-
+Route::get('/showOne/{id}',[studentController::class,'showOne']);
 Route::get('/',[studentController::class,'show']);
+Route::get('/update/{id}',[studentController::class,'update']);
+Route::get('/delete/{id}',[studentController::class,'delete']);

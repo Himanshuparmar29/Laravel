@@ -15,29 +15,19 @@ class studentSeeder extends Seeder
     {
         $students = [
             [
-                'name' => 'Himanshu',
-                'age' => 29
+                'name' => 'Avadh',
+                'age' => 20
             ],
             [
-                'name' => 'Harsh',
-                'age' => 19
+                'name' => 'Aaryan',
+                'age' => 15
             ],
             [
-                'name' => 'Huzaifa',
-                'age' => 18
-            ],
-            [
-                'name' => 'Harshita',
-                'age' => 10
-            ],
-            [
-                'name' => 'Hemali',
-                'age' => 25
+                'name' => 'Arti',
+                'age' => 22
             ]
         ];
-
-        foreach($students as $student)
-        {
+        foreach($students as $student){
             student::insert($student);
         }
     }
